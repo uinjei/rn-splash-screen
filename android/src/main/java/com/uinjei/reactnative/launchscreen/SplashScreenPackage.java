@@ -15,8 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class LaunchScreenPackage implements ReactPackage {
-    
+public class SplashScreenPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
@@ -24,11 +23,10 @@ public class LaunchScreenPackage implements ReactPackage {
     }
 
     @Override
-    public List<NativeModule> createNativeModules(
-            ReactApplicationContext reactContext) {
+    public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
 
-        modules.add(new LaunchScreenModule(reactContext));
+        modules.add(new SplashScreenModule(reactContext));
 
         return modules;
     }

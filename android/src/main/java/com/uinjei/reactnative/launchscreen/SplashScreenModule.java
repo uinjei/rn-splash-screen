@@ -12,7 +12,7 @@ class SplashScreenModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "LaunchScreen";
+        return "SplashScreen";
     }
 
     /**
@@ -20,7 +20,7 @@ class SplashScreenModule extends ReactContextBaseJavaModule {
      */
     @ReactMethod
     public void show() {
-        LaunchScreen.show((ReactActivity)getCurrentActivity(), null, 0);
+        SplashScreen.show((ReactActivity) getCurrentActivity(), null, 0);
     }
 
     /**
@@ -28,6 +28,6 @@ class SplashScreenModule extends ReactContextBaseJavaModule {
      */
     @ReactMethod
     public void hide() {
-        LaunchScreen.hide(getCurrentActivity());
+        SplashScreen.hide(getCurrentActivity());
     }
 }

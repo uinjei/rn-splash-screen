@@ -10,7 +10,7 @@ import com.facebook.react.bridge.ReactContext;
 
 import java.lang.ref.WeakReference;
 
-public class LaunchScreen {
+public class SplashScreen {
     private static Dialog mSplashDialog;
     private static WeakReference<ReactActivity> mActivity;
 
