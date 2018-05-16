@@ -1,8 +1,7 @@
 {
-  "name": "react-native-launch-screen",
-  "version": "0.0.4",
-  "description":
-    "A JavaScript-controlled splash-screen designed to be run directly after the native splash-screen.",
+  "name": "@jinwei/react-native-launch-screen",
+  "version": "0.0.5",
+  "description": "A JavaScript-controlled splash-screen designed to be run directly after the native splash-screen.",
   "main": "index.js",
   "author": {
     "name": "Edwin Javier Javier",
