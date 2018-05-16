@@ -1,11 +1,12 @@
 {
-  "name": "rn-splash-screen",
-  "version": "5.2.0",
-  "description": "A JavaScript-controlled splash-screen designed to be run directly after the native splash-screen.",
+  "name": "react-native-launch-screen",
+  "version": "0.0.4",
+  "description":
+    "A JavaScript-controlled splash-screen designed to be run directly after the native splash-screen.",
   "main": "index.js",
   "author": {
-    "name": "Ryan Leckey",
-    "email": "leckey.ryan@gmail.com"
+    "name": "Edwin Javier Javier",
+    "email": "javier.edwinjay@gmail.com"
   },
   "license": "MIT",
   "keywords": [
@@ -14,18 +15,19 @@
     "ios",
     "android",
     "splashscreen",
+    "launchscreen",
     "splash",
     "launchui",
     "show",
     "hide",
     "mobile"
   ],
-  "homepage": "https://github.com/mehcode/rn-splash-screen",
+  "homepage": "https://github.com/uinjei/react-native-launch-screen",
   "bugs": {
-    "url": "https://github.com/mehcode/rn-splash-screen/issues"
+    "url": "https://github.com/uinjei/react-native-launch-screen/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mehcode/rn-splash-screen.git"
+    "url": "git://github.com/uinjei/react-native-launch-screen.git"
   }
 }

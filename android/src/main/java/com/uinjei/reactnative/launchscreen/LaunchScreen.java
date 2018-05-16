@@ -1,4 +1,4 @@
-package com.mehcode.reactnative.splashscreen;
+package com.uinjei.reactnative.launchscreen;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -10,15 +10,17 @@ import com.facebook.react.bridge.ReactContext;
 
 import java.lang.ref.WeakReference;
 
-public class SplashScreen {
+public class LaunchScreen {
     private static Dialog mSplashDialog;
     private static WeakReference<ReactActivity> mActivity;
 
     /**
      * Show the splash screen.
      */
-    public static void show(final ReactActivity activity, final ReactInstanceManager instanceManager) {
-        if (activity == null) return;
+    public static void show(final ReactActivity activity, final ReactInstanceManager instanceManager,
+            final int themeResId) {
+        if (activity == null)
+            return;
 
         // Store weak-reference to showing activity (in case we try to hide too early)
         // NOTE: For instance in direct execution of index.android.js
@@ -28,7 +30,7 @@ public class SplashScreen {
             @Override
             public void run() {
                 if (!activity.isFinishing()) {
-                    mSplashDialog = new Dialog(activity, R.style.RNSplashScreen_SplashTheme);
+                    mSplashDialog = new Dialog(activity, themeResId);
                     mSplashDialog.setCancelable(false);
 
                     if (!mSplashDialog.isShowing()) {
@@ -46,19 +48,20 @@ public class SplashScreen {
                             activity.getWindow().getDecorView().setBackgroundColor(Color.WHITE);
                         } else {
                             // Else; wait until react is initialized before we release the native splash
-                            instanceManager.addReactInstanceEventListener(new ReactInstanceManager.ReactInstanceEventListener() {
-                                @Override
-                                public void onReactContextInitialized(ReactContext context) {
-
-                                    activity.runOnUiThread(new Runnable() {
+                            instanceManager.addReactInstanceEventListener(
+                                    new ReactInstanceManager.ReactInstanceEventListener() {
                                         @Override
-                                        public void run() {
-                                            // Hide the native splash screen
-                                            activity.getWindow().getDecorView().setBackgroundColor(Color.WHITE);
+                                        public void onReactContextInitialized(ReactContext context) {
+
+                                            activity.runOnUiThread(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    // Hide the native splash screen
+                                                    activity.getWindow().getDecorView().setBackgroundColor(Color.WHITE);
+                                                }
+                                            });
                                         }
                                     });
-                                }
-                            });
                         }
                     }
                 }
@@ -67,11 +70,13 @@ public class SplashScreen {
     }
 
     /**
-     * Close the active splash screen.
+     * Close the active launch screen.
      */
     public static void hide(Activity activity) {
-        if (activity == null) activity = mActivity.get();
-        if (activity == null) return;
+        if (activity == null)
+            activity = mActivity.get();
+        if (activity == null)
+            return;
 
         activity.runOnUiThread(new Runnable() {
             @Override

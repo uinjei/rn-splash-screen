@@ -1,4 +1,4 @@
-package com.mehcode.reactnative.splashscreen;
+package com.uinjei.reactnative.launchscreen;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -12,7 +12,7 @@ class SplashScreenModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "SplashScreen";
+        return "LaunchScreen";
     }
 
     /**
@@ -20,7 +20,7 @@ class SplashScreenModule extends ReactContextBaseJavaModule {
      */
     @ReactMethod
     public void show() {
-        SplashScreen.show((ReactActivity)getCurrentActivity(), null);
+        LaunchScreen.show((ReactActivity)getCurrentActivity(), null, 0);
     }
 
     /**
@@ -28,6 +28,6 @@ class SplashScreenModule extends ReactContextBaseJavaModule {
      */
     @ReactMethod
     public void hide() {
-        SplashScreen.hide(getCurrentActivity());
+        LaunchScreen.hide(getCurrentActivity());
     }
 }

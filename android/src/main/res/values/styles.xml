@@ -1,10 +1,10 @@
 <resources>
-    <style name="RNSplashScreen_SplashAnimation">
+    <style name="LaunchScreen_SplashAnimation">
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
 
-    <style name="RNSplashScreen_SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash</item>
-        <item name="android:windowAnimationStyle">@style/RNSplashScreen_SplashAnimation</item>
+    <style name="LaunchScreen_SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+        <item name="android:windowAnimationStyle">@style/LaunchScreen_SplashAnimation</item>
     </style>
 </resources>
